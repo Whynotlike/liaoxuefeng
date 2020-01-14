@@ -84,28 +84,48 @@
 Practice
 '''
 
-class Screen(object):
+# class Screen(object):
 
-	@property
-	def Width(self):
-		return self._Width
+# 	@property
+# 	def Width(self):
+# 		return self._Width
 	
-	@Width.setter
-	def Width(self,value):
-		self._Width = value
+# 	@Width.setter
+# 	def Width(self,value):
+# 		self._Width = value
 
-	@property
-	def Height(self):
-		return self._Height
+# 	@property
+# 	def Height(self):
+# 		return self._Height
 	
-	@Height.setter
-	def Height(self,value):
-		self._Height = value
+# 	@Height.setter
+# 	def Height(self,value):
+# 		self._Height = value
 
-	@property
-	def Resolution(self):
-		return self.Width * self.Height
+# 	@property
+# 	def Resolution(self):
+# 		return self.Width * self.Height
 	
 '''
 Completed January 7,2020
 '''
+'''
+优化版
+'''
+class Screen(object):
+
+	@property
+	def kid(self):
+		return self._width,self._height
+
+	@kid.setter
+	def kid(self, arrs):
+		self._width = arrs[0]
+		self._height = arrs[1]
+	
+	@property
+	def Sum(self):
+		self.sum = self._width * self._height
+		return self.sum
+	
+# January 8
